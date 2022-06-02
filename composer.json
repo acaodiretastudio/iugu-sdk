@@ -7,7 +7,7 @@
 		"inboud"
 	],
 	"require": {
-		"php": ">=8.0.19",
+		"php": "^8.0",
 		"guzzlehttp/guzzle": ">=6.0"
 	},
 	"require-dev": {
