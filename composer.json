@@ -1,5 +1,5 @@
 {
-	"name": "bubbstore/iugu-php-sd",
+	"name": "acaodireta-php/iugu",
 	"type": "library",
 	"description": "Biblioteca não oficial de integração com a API da Iugu",
 	"keywords": [
@@ -7,7 +7,7 @@
 		"inboud"
 	],
 	"require": {
-		"php": "~5.6|~7.0",
+		"php": "^7.3|^8.0",
 		"guzzlehttp/guzzle": "~6.0"
 	},
 	"require-dev": {
@@ -35,8 +35,8 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Lucas Colette",
-			"email": "lucas@bubb.com.b"
+			"name": "Ação direta",
+			"email": "php@acaodireta.com.br"
 		}
 	],
 	"minimum-stability": "stable"
