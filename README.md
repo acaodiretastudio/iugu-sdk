@@ -8,7 +8,7 @@ Biblioteca que realiza integração com a API da [Iugu](http://www.iugu.com)
 ## Instalação via composer
 
 ```bash
-$ composer require bubbstore/iugu-php-sdk
+$ composer require acaodireta-php/iugu
 ```
 
 ## Serviços
@@ -242,7 +242,3 @@ Consulte [CHANGELOG](.github/CHANGELOG.md) para obter mais informações sobre o
 ## Contribuindo
 
 Consulte [CONTRIBUTING](.github/CONTRIBUTING.md) para obter mais detalhes.
-
-## Segurança
-
-Se você descobrir quaisquer problemas relacionados à segurança, envie um e-mail para contato@bubbstore.com.br em vez de usar as issues.
