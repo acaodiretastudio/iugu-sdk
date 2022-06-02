@@ -71,17 +71,4 @@ class Customer extends BaseRequest implements CustomerInterface
 
         return $this->fetchResponse();
     }
-
-    /**
-     * list payment methods
-     *
-     * @param string $id
-     * @return array
-     */
-    public function listPaymentMethods($id)
-    {
-        $this->sendApiRequest('GET', sprintf('customers/%s/payment_methods', $id));
-
-        return $this->fetchResponse();
-    }
 }

@@ -56,6 +56,13 @@ class Invoice extends BaseRequest implements InvoiceInterface
         return $this->fetchResponse();
     }
 
+    public function findAll($query)
+    {
+        $this->sendApiRequest('GET', 'invoices?query='.$query);
+
+        return $this->fetchResponse();
+    }
+
     /**
      * refund
      *

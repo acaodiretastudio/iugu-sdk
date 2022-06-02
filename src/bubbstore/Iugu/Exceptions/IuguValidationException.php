@@ -11,6 +11,7 @@ class IuguValidationException extends Exception
     public function __construct($message, $code, $errors = [])
     {
         $this->errors = $errors;
+
         parent::__construct($message, $code);
     }
 

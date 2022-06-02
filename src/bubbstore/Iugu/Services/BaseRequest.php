@@ -85,15 +85,33 @@ class BaseRequest
             }
 
             $request = $this->http->$method($path, $requestParams);
-            
+
             $this->response = json_decode($request->getBody()->getContents(), true);
         } catch (RequestException $e) {
-            if ($e->getCode() == 422) {
-                $response = json_decode($e->getResponse()->getBody()->getContents(), true);
-                throw new IuguValidationException($e->getMessage(), $e->getCode(), $response['errors']);
-            }
+            // if ($e->getCode() == 422) {
+            //     $response = json_decode($e->getResponse()->getBody()->getContents(), true);
+            //     throw new IuguValidationException($e->getMessage(), $e->getCode(), $response['errors']);
+            // }
 
-            throw new IuguException($e->getMessage(), $e->getCode());
+            // throw new IuguException($e->getMessage(), $e->getCode());
+
+
+            if ($e->getCode() == 422) {
+                $erros = json_decode($e->getResponse()->getBody()->getContents(), true);
+                $formata_erros = '';
+                $count = 1;
+
+                foreach ($erros['errors'] as $key => $erro) {
+                    $formata_erros .= 'Erro ' . $count . ' -  Campo: ' . $key . ' Mensagem: ' . $erro[0] . ' \\n \n <br> <b /> ';
+                    $count++;
+                }
+                $this->response['erro'] = $formata_erros;
+            } else {
+                $this->response['erro'] = $e->getMessage();
+            }
+            $this->response['code'] = $e->getCode();
+
+            return  $this->response;
         }
     }
 }
