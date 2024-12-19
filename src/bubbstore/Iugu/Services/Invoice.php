@@ -92,4 +92,18 @@ class Invoice extends BaseRequest implements InvoiceInterface
 
         return $this->fetchResponse();
     }
+
+    /**
+     * send_email
+     *
+     * Reenvia o e-mail da fatura para o cliente
+     *
+     * @param string $id
+     * @return array
+     */
+    public function sendEmail($id)
+    {
+        $this->sendApiRequest('POST', sprintf('invoices/%s/send_email', $id));
+        return $this->fetchResponse();
+    }
 }
