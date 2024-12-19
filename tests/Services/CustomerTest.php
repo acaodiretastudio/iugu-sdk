@@ -9,7 +9,6 @@ use bubbstore\Iugu\Exceptions\IuguValidationException;
 
 class CustomerTest extends TestCase
 {
-
     /**
      * @var \bubbstore\RDStation\Iugu
      */

@@ -9,4 +9,5 @@ interface InvoiceInterface
     public function find($id);
     public function refund($id);
     public function cancel($id);
+    public function sendEmail($id);
 }
