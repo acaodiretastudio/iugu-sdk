@@ -50,16 +50,6 @@ class Iugu
     }
 
     /**
-     * charge - Serviço de Cliente
-     *
-     * @return \acaodireta\Services\Charge
-     */
-    public function charge(): ChargeInterface
-    {
-        return new Charge($this->http, $this);
-    }
-
-    /**
      * invoice - Serviço de Fatura
      *
      * @return \acaodireta\Services\Invoice

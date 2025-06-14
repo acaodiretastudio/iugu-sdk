@@ -34,11 +34,6 @@ class IuguTest extends TestCase
         $this->assertInstanceOf(PaymentMethodInterface::class, $this->iugu->paymentMethod());
     }
 
-    public function testCharge()
-    {
-        $this->assertInstanceOf(ChargeInterface::class, $this->iugu->charge());
-    }
-
     public function testInvoice()
     {
         $this->assertInstanceOf(InvoiceInterface::class, $this->iugu->invoice());
