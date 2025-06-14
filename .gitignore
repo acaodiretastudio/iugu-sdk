@@ -3,4 +3,4 @@ composer.lock
 vendor
 index.php
 build
-.phpunit.result
+.phpunit.result.cache
