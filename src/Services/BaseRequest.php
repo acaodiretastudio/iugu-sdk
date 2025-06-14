@@ -2,28 +2,12 @@
 
 namespace acaodireta\Services;
 
-use acaodireta\Exceptions\IuguException;
-use acaodireta\Exceptions\IuguValidationException;
 use acaodireta\Iugu;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 
 class BaseRequest
 {
-    /**
-     * Cliente HTTP
-     *
-     * @var \GuzzleHttp\ClientInterface
-     */
-    protected $http;
-
-    /**
-     * Iugu
-     *
-     * @var \acaodireta\Iugu
-     */
-    protected $iugu;
-
     /**
      * Parâmetros do cliente
      *
@@ -38,10 +22,8 @@ class BaseRequest
      */
     protected $response;
 
-    public function __construct(ClientInterface $http, Iugu $iugu)
+    public function __construct(private ClientInterface $http, private Iugu $iugu)
     {
-        $this->http = $http;
-        $this->iugu = $iugu;
     }
 
     /**
@@ -88,14 +70,6 @@ class BaseRequest
 
             $this->response = json_decode($request->getBody()->getContents(), true);
         } catch (RequestException $e) {
-            // if ($e->getCode() == 422) {
-            //     $response = json_decode($e->getResponse()->getBody()->getContents(), true);
-            //     throw new IuguValidationException($e->getMessage(), $e->getCode(), $response['errors']);
-            // }
-
-            // throw new IuguException($e->getMessage(), $e->getCode());
-
-
             if ($e->getCode() == 422) {
                 $erros = json_decode($e->getResponse()->getBody()->getContents(), true);
                 $formata_erros = '';

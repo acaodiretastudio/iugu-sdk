@@ -3,10 +3,12 @@
 namespace acaodireta\Services;
 
 use acaodireta\Contracts\ChargeInterface;
+use acaodireta\Iugu;
+use GuzzleHttp\ClientInterface;
 
 class Charge extends BaseRequest implements ChargeInterface
 {
-    public function __construct($http, $iugu)
+    public function __construct(private ClientInterface $http, private Iugu $iugu)
     {
         parent::__construct($http, $iugu);
     }

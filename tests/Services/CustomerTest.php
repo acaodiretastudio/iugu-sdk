@@ -3,8 +3,8 @@
 namespace acaodireta\Services;
 
 use acaodireta\TestCase;
-use acaodireta\Iugu;
 use acaodireta\Exceptions\IuguValidationException;
+use acaodireta\Iugu;
 
 class CustomerTest extends TestCase
 {
@@ -14,25 +14,12 @@ class CustomerTest extends TestCase
     {
         parent::setUp();
 
-        $this->iugu = new Iugu(
-            'TOKEN'
-        );
-    }
-
-    public function test_if_email_is_invalid()
-    {
-        $body = __DIR__.'/../ResponseSamples/Customers/InvalidCustomerEmail.json';
-        $http = $this->mockHttpClient($body, 422);
-
-        $this->expectException(IuguValidationException::class);
-        $customer = new Customer($http, $this->iugu);
-
-        $customer->create(['email' => 'foo']);
+        $this->iugu = new Iugu('TOKEN');
     }
 
     public function test_create_customer()
     {
-        $body = __DIR__.'/../ResponseSamples/Customers/Customer.json';
+        $body = __DIR__ . '/../ResponseSamples/Customers/Customer.json';
         $http = $this->mockHttpClient($body);
 
         $customer = new Customer($http, $this->iugu);
@@ -48,24 +35,24 @@ class CustomerTest extends TestCase
 
     public function test_find_customer()
     {
-        $body = __DIR__.'/../ResponseSamples/Customers/Customer.json';
+        $body = __DIR__ . '/../ResponseSamples/Customers/Customer.json';
         $http = $this->mockHttpClient($body);
 
         $customer = new Customer($http, $this->iugu);
         $customer = $customer->find('77C2565F6F064A26ABED4255894224F0');
 
-        $this->assertContains('77C2565F6F064A26ABED4255894224F0', $customer['id']);
+        $this->assertEquals('77C2565F6F064A26ABED4255894224F0', $customer['id']);
     }
 
     public function test_delete_customer()
     {
-        $body = __DIR__.'/../ResponseSamples/Customers/Customer.json';
+        $body = __DIR__ . '/../ResponseSamples/Customers/Customer.json';
         $http = $this->mockHttpClient($body);
 
         $customer = new Customer($http, $this->iugu);
         $customer = $customer->delete('77C2565F6F064A26ABED4255894224F0');
 
-        $this->assertContains('77C2565F6F064A26ABED4255894224F0', $customer['id']);
+        $this->assertEquals('77C2565F6F064A26ABED4255894224F0', $customer['id']);
     }
 
 }

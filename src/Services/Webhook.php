@@ -2,12 +2,13 @@
 
 namespace acaodireta\Services;
 
-use acaodireta\Contracts\PaymentMethodInterface;
 use acaodireta\Contracts\WebhookInterface;
+use acaodireta\Iugu;
+use GuzzleHttp\ClientInterface;
 
 class Webhook extends BaseRequest implements WebhookInterface
 {
-    public function __construct($http, $iugu)
+    public function __construct(private ClientInterface $http, private Iugu $iugu)
     {
         parent::__construct($http, $iugu);
     }

@@ -3,10 +3,13 @@
 namespace acaodireta\Services;
 
 use acaodireta\Contracts\CustomerInterface;
+use acaodireta\Services\BaseRequest;
+use acaodireta\Iugu;
+use GuzzleHttp\ClientInterface;
 
 class Customer extends BaseRequest implements CustomerInterface
 {
-    public function __construct($http, $iugu)
+    public function __construct(private ClientInterface $http, private Iugu $iugu)
     {
         parent::__construct($http, $iugu);
     }
