@@ -5,7 +5,7 @@ Biblioteca que realiza integração com a API da [Iugu](http://www.iugu.com)
 ## Instalação via composer
 
 ```bash
-$ composer require acaodireta-php/iugu
+$ composer require acaodiretastudio/iugu-sdk
 ```
 
 ## Serviços

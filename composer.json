@@ -13,11 +13,23 @@
 	"authors": [
 		{
 			"name": "Ação direta",
-			"email": "php@acaodireta.com.br"
+			"email": "php@acaodireta.com.br",
+			"homepage": "http://www.acaodireta.com.br/",
+            "role": "Developer"
 		},
 		{
-			"name": "Gabriela Amaral Fucci",
-			"email": "contato@gabrielfucci.dev.br"
+			"name": "Gabriel Amaral Fucci",
+			"email": "contato@gabrielfucci.dev.br",
+			"homepage": "https://github.com/gfucci",
+            "role": "Developer"
+		},
+		{
+			"name": "Lucas Colette",
+			"homepage": "https://github.com/lucascolette"
+		},
+		{
+			"name": "Daniel Faria Sampaio",
+			"homepage": "https://github.com/danfsd"
 		}
 	],
 	"support": {
