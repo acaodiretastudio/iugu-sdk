@@ -1,10 +1,10 @@
 <?php
 
-namespace bubbstore\Iugu\Services;
+namespace acaodireta\Services;
 
-use bubbstore\Iugu\Exceptions\IuguException;
-use bubbstore\Iugu\Exceptions\IuguValidationException;
-use bubbstore\Iugu\Iugu;
+use acaodireta\Exceptions\IuguException;
+use acaodireta\Exceptions\IuguValidationException;
+use acaodireta\Iugu;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 
@@ -20,7 +20,7 @@ class BaseRequest
     /**
      * Iugu
      *
-     * @var \bubbstore\Iugu\Iugu
+     * @var \acaodireta\Iugu
      */
     protected $iugu;
 

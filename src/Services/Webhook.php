@@ -1,9 +1,9 @@
 <?php
 
-namespace bubbstore\Iugu\Services;
+namespace acaodireta\Services;
 
-use bubbstore\Iugu\Contracts\PaymentMethodInterface;
-use bubbstore\Iugu\Contracts\WebhookInterface;
+use acaodireta\Contracts\PaymentMethodInterface;
+use acaodireta\Contracts\WebhookInterface;
 
 class Webhook extends BaseRequest implements WebhookInterface
 {

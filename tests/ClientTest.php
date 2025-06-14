@@ -1,16 +1,14 @@
 <?php
 
-namespace bubbstore\Iugu;
+namespace acaodireta;
 
 use Mockery;
-use GuzzleHttp\ClientInterface;
-use bubbstore\Iugu\Services\Customer;
-use bubbstore\Iugu\Contracts\CustomerInterface;
+use acaodireta\Contracts\CustomerInterface;
 
 class ClientTest extends TestCase
 {
     /**
-     * @var \bubbstore\Iugu\Iugu
+     * @var \acaodireta\Iugu
      */
     protected $iugu;
 

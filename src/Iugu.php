@@ -1,16 +1,16 @@
 <?php
 
-namespace bubbstore\Iugu;
+namespace acaodireta;
 
-use bubbstore\Iugu\Contracts\CustomerInterface;
-use bubbstore\Iugu\Contracts\PaymentMethodInterface;
-use bubbstore\Iugu\Contracts\ChargeInterface;
-use bubbstore\Iugu\Contracts\InvoiceInterface;
-use bubbstore\Iugu\Services\Customer;
-use bubbstore\Iugu\Services\PaymentMethod;
-use bubbstore\Iugu\Services\Charge;
-use bubbstore\Iugu\Services\Invoice;
-use bubbstore\Iugu\Exceptions\IuguException;
+use acaodireta\Contracts\CustomerInterface;
+use acaodireta\Contracts\PaymentMethodInterface;
+use acaodireta\Contracts\ChargeInterface;
+use acaodireta\Contracts\InvoiceInterface;
+use acaodireta\Services\Customer;
+use acaodireta\Services\PaymentMethod;
+use acaodireta\Services\Charge;
+use acaodireta\Services\Invoice;
+use acaodireta\Exceptions\IuguException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Client as HttpClient;
 
@@ -20,28 +20,28 @@ class Iugu
     /**
      * Serviço de Cliente
      *
-     * @var \bubbstore\Iugu\Contracts\CustomerInterface
+     * @var \acaodireta\Contracts\CustomerInterface
      */
     protected $customer;
 
     /**
      * Serviço de Método de Pagamento
      *
-     * @var \bubbstore\Iugu\Contracts\PaymentMethodInterface
+     * @var \acaodireta\Contracts\PaymentMethodInterface
      */
     protected $paymentMethod;
 
     /**
      * Serviço de Cobrança
      *
-     * @var \bubbstore\Iugu\Contracts\ChargeInterface
+     * @var \acaodireta\Contracts\ChargeInterface
      */
     protected $charge;
 
     /**
      * Serviço de Fatura
      *
-     * @var \bubbstore\Iugu\Contracts\InvoiceInterface
+     * @var \acaodireta\Contracts\InvoiceInterface
      */
     protected $invoice;
 
@@ -83,7 +83,7 @@ class Iugu
      *
      * Serviço de Cliente
      *
-     * @return \bubbstore\Iugu\Services\Customer
+     * @return \acaodireta\Services\Customer
      */
     public function customer()
     {
@@ -95,7 +95,7 @@ class Iugu
      *
      * Serviço de Método de Pagamento
      *
-     * @return \bubbstore\Iugu\Services\PaymentMethod
+     * @return \acaodireta\Services\PaymentMethod
      */
     public function paymentMethod()
     {
@@ -107,7 +107,7 @@ class Iugu
      *
      * Serviço de Cliente
      *
-     * @return \bubbstore\Iugu\Services\Charge
+     * @return \acaodireta\Services\Charge
      */
     public function charge()
     {
@@ -119,7 +119,7 @@ class Iugu
      *
      * Serviço de Fatura
      *
-     * @return \bubbstore\Iugu\Services\Invoice
+     * @return \acaodireta\Services\Invoice
      */
     public function invoice()
     {

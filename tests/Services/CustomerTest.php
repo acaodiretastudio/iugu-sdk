@@ -1,11 +1,11 @@
 <?php
 
-namespace bubbstore\Iugu\Services;
+namespace acaodireta\Services;
 
-use bubbstore\Iugu\TestCase;
-use bubbstore\Iugu\Iugu;
-use bubbstore\Iugu\Exceptions\IuguException;
-use bubbstore\Iugu\Exceptions\IuguValidationException;
+use acaodireta\TestCase;
+use acaodireta\Iugu;
+use acaodireta\Exceptions\IuguException;
+use acaodireta\Exceptions\IuguValidationException;
 
 class CustomerTest extends TestCase
 {

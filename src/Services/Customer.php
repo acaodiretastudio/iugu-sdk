@@ -1,8 +1,8 @@
 <?php
 
-namespace bubbstore\Iugu\Services;
+namespace acaodireta\Services;
 
-use bubbstore\Iugu\Contracts\CustomerInterface;
+use acaodireta\Contracts\CustomerInterface;
 
 class Customer extends BaseRequest implements CustomerInterface
 {

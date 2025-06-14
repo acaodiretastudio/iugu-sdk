@@ -1,8 +1,8 @@
 <?php
 
-namespace bubbstore\Iugu\Services;
+namespace acaodireta\Services;
 
-use bubbstore\Iugu\Contracts\ChargeInterface;
+use acaodireta\Contracts\ChargeInterface;
 
 class Charge extends BaseRequest implements ChargeInterface
 {

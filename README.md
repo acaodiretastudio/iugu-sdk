@@ -27,9 +27,9 @@ Este SDK suporta os seguintes serviços:
 Para utilizar este SDK, será necessário utilizar seu token de acesso de sua conta Iugu.
 
 ```php
-use bubbstore\Iugu;
-use bubbstore\Iugu\Exceptions\IuguException;
-use bubbstore\Iugu\Exceptions\IuguValidationException;
+use acaodireta;
+use acaodireta\Exceptions\IuguException;
+use acaodireta\Exceptions\IuguValidationException;
 
 $iugu = new Iugu('SEU_TOKEN');
 ```
