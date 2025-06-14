@@ -12,7 +12,7 @@ class ClientTest extends TestCase
      */
     protected $iugu;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

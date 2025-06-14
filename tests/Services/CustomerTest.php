@@ -4,17 +4,13 @@ namespace acaodireta\Services;
 
 use acaodireta\TestCase;
 use acaodireta\Iugu;
-use acaodireta\Exceptions\IuguException;
 use acaodireta\Exceptions\IuguValidationException;
 
 class CustomerTest extends TestCase
 {
-    /**
-     * @var \bubbstore\RDStation\Iugu
-     */
     protected $iugu;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

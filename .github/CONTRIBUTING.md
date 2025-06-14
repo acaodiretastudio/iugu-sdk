@@ -2,8 +2,6 @@
 
 Contribuições são **bem vindas** e serão totalmente **creditadas**.
 
-Nós aceitamos contribuições via **Pull Requests** no [Github](https://github.com/bubbstore/bubbstore-api-v2).
-
 ## Pull Requests
 
 - **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)** - Verifique o estilo do código com ``$ composer check-style`` e corrija com ``$ composer fix-style``.

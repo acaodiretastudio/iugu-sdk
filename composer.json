@@ -27,9 +27,9 @@
         "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
     },
 	"autoload": {
-		"psr-0": {
-			"acaodireta": "src/"
-		}
+		"psr-4": {
+            "acaodireta\\": "src/"
+        }
 	},
 	"license": "MIT",
 	"authors": [

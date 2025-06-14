@@ -2,20 +2,14 @@
 
 namespace acaodireta\Services;
 
-use acaodireta\TestCase;
 use acaodireta\Iugu;
-use acaodireta\Exceptions\IuguException;
-use acaodireta\Exceptions\IuguValidationException;
+use acaodireta\TestCase;
 
 class ChargeTest extends TestCase
 {
-
-    /**
-     * @var \bubbstore\RDStation\Iugu
-     */
     protected $iugu;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -32,14 +26,14 @@ class ChargeTest extends TestCase
         $charge = new Charge($http, $this->iugu);
         $charge = $charge->create([
             'method' => 'bank_slip',
-            'email' => 'lucas@bubb.com.br',
+            'email' => 'contato@gabrielfucci.dev.br',
             'order_id' => uniqid(),
             'payer' => [
                 'cpf_cnpj' => '65634052076',
-                'name' => 'Lucas Colette',
+                'name' => 'Acaodireta',
                 'phone_prefix' => '11',
                 'phone' => '11111111',
-                'email' => 'lucas@bubb.com.br',
+                'email' => 'contato@gabrielfucci.dev.br',
                 'address' => [
                     'street' => 'Foo Bar',
                     'number' => '123',

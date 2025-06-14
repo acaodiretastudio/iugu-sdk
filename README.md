@@ -2,9 +2,6 @@
 
 Biblioteca que realiza integração com a API da [Iugu](http://www.iugu.com)
 
-[![StyleCI](https://styleci.io/repos/140902040/shield?branch=master)](https://styleci.io/repos/140902040)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d4e66f98ad0539e0b65d/maintainability)](https://codeclimate.com/github/bubbstore/iugu-php-sdk/maintainability)
-
 ## Instalação via composer
 
 ```bash
@@ -40,8 +37,8 @@ $iugu = new Iugu('SEU_TOKEN');
 
 ```php
 $customer = $iugu->customer()->create([
-    'name' => 'Lucas Colette',
-    'email' => 'lucas@bubb.com.br',
+    'name' => 'Acaodireta',
+    'email' => 'contato@gabrielfucci.dev.br',
 ]);
 
 // Imprime o ID do cliente
@@ -77,14 +74,14 @@ $iugu->customer()->delete('ID_CLIENTE');
 ```php
 $charge = $iugu->charge()->create([
             'method' => 'bank_slip',
-            'email' => 'lucas@bubb.com.br',
+            'email' => 'contato@gabrielfucci.dev.br',
             'order_id' => uniqid(),
             'payer' => [
                 'cpf_cnpj' => '65634052076',
-                'name' => 'Lucas Colette',
+                'name' => 'Acaodireta',
                 'phone_prefix' => '11',
                 'phone' => '11111111',
-                'email' => 'lucas@bubb.com.br',
+                'email' => 'contato@gabrielfucci.dev.br',
                 'address' => [
                     'street' => 'Foo Bar',
                     'number' => '123',
@@ -125,7 +122,7 @@ $charge = $iugu->charge()->create([
 ```php
 $invoice = $iugu->invoice()->create([
     'order_id' => uniqid(),
-    'email' => 'lucas@bubb.com.br',
+    'email' => 'contato@gabrielfucci.dev.br',
     'due_date' => '2018-07-14',
     'notification_url' => 'https://webhook.site/08703bf2-d408-4f4c-b91c-0bc8e14352b2',
     'fines' => false,
@@ -152,10 +149,10 @@ $invoice = $iugu->invoice()->create([
     ],
     'payer' => [
         'cpf_cnpj' => '65634052076',
-        'name' => 'Lucas Colette',
+        'name' => 'Acaodireta',
         'phone_prefix' => '11',
         'phone' => '11111111',
-        'email' => 'lucas@bubb.com.br',
+        'email' => 'contato@gabrielfucci.dev.br',
         'address' => [
             'street' => 'Foo Bar',
             'number' => '123',
