@@ -1,11 +1,40 @@
 {
-	"name": "acaodireta-php/iugu",
+	"name": "acaodiretastudio/iugu-sdk",
 	"type": "library",
 	"description": "Biblioteca não oficial de integração com a API da Iugu",
 	"keywords": [
 		"iugu",
-		"inboud"
+		"php",
+		"iugu sdk",
+		"iugu api",
+		"iugu php"
 	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ação direta",
+			"email": "php@acaodireta.com.br"
+		},
+		{
+			"name": "Gabriela Amaral Fucci",
+			"email": "contato@gabrielfucci.dev.br"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/acaodiretastudio/iugu-sdk/issues",
+		"source": "https://github.com/acaodiretastudio/iugu-sdk"
+	},
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+            "acaodireta\\": "src/"
+        }
+	},
+	"autoload-dev": {
+        "psr-4": {
+            "acaodireta\\": "tests/"
+        }
+    },
 	"require": {
 		"php": "^8.3",
 		"guzzlehttp/guzzle": "^7.4"
@@ -13,30 +42,11 @@
 	"require-dev": {
         "mockery/mockery": "^1.6",
         "phpunit/phpunit": "^12.0",
-        "squizlabs/php_codesniffer": "^2.3",
-        "larapack/dd": "^1.1"
+        "squizlabs/php_codesniffer": "^2.3"
 	},
-	"autoload-dev": {
-        "psr-4": {
-            "acaodireta\\": "tests/"
-        }
-    },
     "scripts": {
         "test": "phpunit --colors=always",
         "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
         "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
-    },
-	"autoload": {
-		"psr-4": {
-            "acaodireta\\": "src/"
-        }
-	},
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Ação direta",
-			"email": "php@acaodireta.com.br"
-		}
-	],
-	"minimum-stability": "stable"
+    }
 }
