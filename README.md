@@ -12,10 +12,10 @@ $ composer require acaodireta-php/iugu
 
 Este SDK suporta os seguintes serviços:
 
-- [Clientes (customer)](https://dev.iugu.com/reference/criar-cliente)
-- [Faturas (invoice)](https://dev.iugu.com/reference/criar-fatura)
-- [Métodos de pagamento (paymentMethod)](https://dev.iugu.com/reference/criar-forma-de-pagamento)
-- [Webhooks (webhook)](https://dev.iugu.com/reference/buscar-gatilho)
+- [Clientes](https://dev.iugu.com/reference/criar-cliente)
+- [Faturas](https://dev.iugu.com/reference/criar-fatura)
+- [Métodos de pagamento](https://dev.iugu.com/reference/criar-forma-de-pagamento)
+- [Webhooks](https://dev.iugu.com/reference/buscar-gatilho)
 
 [Referência da API](https://dev.iugu.com/reference)
 
@@ -33,10 +33,12 @@ $iugu = new Iugu('SEU_TOKEN');
 
 ### Exemplos
 
+```php
 $iugu->invoice()->capture('ID_FATURA');
 $iugu->customer()->find('ID_CLIENTE');
 $iugu->paymentMethod()->find('ID_CLIENTE', 'ID_METODO_PAGAMENTO');
 $iugu->webhook()->list();
+```
 
 ## Testando
 
